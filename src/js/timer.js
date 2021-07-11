@@ -7,9 +7,10 @@ const secsSpan = document.querySelector("span[data-value='secs']");
 
 
 startBtn.addEventListener('click', onClickInterval);
+let timerId = null;
 
 function onClickInterval() {
-  let timerId = setInterval(() => {
+  timerId = setInterval(() => {
     onClickStart()
   }, 1000);  
 };
@@ -19,7 +20,19 @@ function onClickStart() {
   const currentDate = new Date();
   const deltaTime = userDate.getTime() - currentDate.getTime();
 
-  convertMs(deltaTime) 
+  if (deltaTime < 1000) {
+    clearInterval(timerId)
+    const Swal = require('sweetalert2')
+    Swal.fire({
+      text: "Please choose a date in the future",
+      icon: 'error',
+      confirmButtonText: 'Ok boomer'
+    })
+
+  } else {
+    convertMs(deltaTime) 
+    
+  }
 };
 
 function convertMs(ms) {
@@ -46,9 +59,3 @@ function pad(value) {
 
 
 
-// const Swal = require('sweetalert2')
-  //   Swal.fire({
-  //     text: "Please choose a date in the future",
-  //     icon: 'error',
-  //     confirmButtonText: 'Ok boomer'
-  //   })
