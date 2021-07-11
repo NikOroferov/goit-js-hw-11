@@ -11,4 +11,4 @@ const t=document.querySelector("button[data-start]"),e=document.querySelector("b
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/timer.js"),require("./js/color-switch.js");
 },{"./sass/main.scss":"clu1","./js/timer.js":"yCUT","./js/color-switch.js":"SbnA"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw/src.4646b344.js.map
+//# sourceMappingURL=/goit-js-hw/src.6b1c60de.js.map
