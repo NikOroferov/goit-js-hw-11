@@ -27,12 +27,11 @@ function onClickStart() {
       text: "Please choose a date in the future",
       icon: 'error',
       confirmButtonText: 'Ok boomer'
-    })
+    });
 
   } else {
-    convertMs(deltaTime) 
-    
-  }
+    convertMs(deltaTime)
+  };
 };
 
 function convertMs(ms) {
