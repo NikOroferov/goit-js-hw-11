@@ -9,4 +9,4 @@ const t=document.querySelector("button[data-start]"),e=document.querySelector("b
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./js/timer.js"),require("./js/color-switch.js");
 },{"./js/timer.js":"yCUT","./js/color-switch.js":"SbnA"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw/src.8243f923.js.map
+//# sourceMappingURL=/goit-js-hw-11/src.8243f923.js.map
