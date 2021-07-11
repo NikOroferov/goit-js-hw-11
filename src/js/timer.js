@@ -28,7 +28,10 @@ function onClickStart() {
       icon: 'error',
       confirmButtonText: 'Ok boomer'
     });
-
+    daysSpan.textContent = '00';
+    hoursSpan.textContent = '00';
+    minsSpan.textContent = '00';
+    secsSpan.textContent = '00';
   } else {
     convertMs(deltaTime)
   };
