@@ -5,6 +5,11 @@ const hoursSpan = document.querySelector("span[data-value='hours']");
 const minsSpan = document.querySelector("span[data-value='mins']");
 const secsSpan = document.querySelector("span[data-value='secs']");
 
+const daysText = daysSpan.textContent;
+const hoursText = hoursSpan.textContent;
+const minsText = minsSpan.textContent;
+const secsText = secsSpan.textContent;
+
 
 startBtn.addEventListener('click', onClickInterval);
 let timerId = null;
@@ -28,10 +33,10 @@ function onClickStart() {
       icon: 'error',
       confirmButtonText: 'Ok boomer'
     });
-    daysSpan.textContent = '00';
-    hoursSpan.textContent = '00';
-    minsSpan.textContent = '00';
-    secsSpan.textContent = '00';
+    daysText = '00';
+    hoursText = '00';
+    minsText = '00';
+    secsText = '00';
   } else {
     convertMs(deltaTime)
   };
@@ -49,10 +54,10 @@ function convertMs(ms) {
   const minutes = pad(Math.floor(((ms % day) % hour) / minute));    
   const seconds = pad(Math.floor((((ms % day) % hour) % minute) / second));
 
-  daysSpan.textContent = `${days}`;
-  hoursSpan.textContent = `${hours}`;
-  minsSpan.textContent = `${minutes}`;
-  secsSpan.textContent = `${seconds}`;
+  daysText = `${days}`;
+  hoursText = `${hours}`;
+  minsText = `${minutes}`;
+  secsText = `${seconds}`;
 };
 
 function pad(value) {
